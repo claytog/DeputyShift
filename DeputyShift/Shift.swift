@@ -7,11 +7,6 @@
 
 import Foundation
 
-//
-//   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
-
-import Foundation
-
 typealias ShiftList = [Shift]
 
 // MARK: - WelcomeElement
@@ -36,5 +31,6 @@ class Shift: Codable {
         self.image = image
     }
 }
+
 
 

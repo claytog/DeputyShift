@@ -21,6 +21,9 @@
 		6981FFA925E6278E0037B18A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6981FFA825E6278E0037B18A /* Constants.swift */; };
 		6981FFB425E630050037B18A /* ShiftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6981FFB325E630050037B18A /* ShiftCell.xib */; };
 		6981FFB925E630B80037B18A /* ShiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6981FFB825E630B80037B18A /* ShiftCell.swift */; };
+		6981FFC725E7213F0037B18A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6981FFC625E7213F0037B18A /* UIImageView+Extension.swift */; };
+		69AA32FA25E7599F00BE9F22 /* ShiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA32F925E7599F00BE9F22 /* ShiftViewController.swift */; };
+		69DDBD9925E7628A00DCADD5 /* ShiftPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DDBD9825E7628A00DCADD5 /* ShiftPost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		6981FFA825E6278E0037B18A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6981FFB325E630050037B18A /* ShiftCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShiftCell.xib; sourceTree = "<group>"; };
 		6981FFB825E630B80037B18A /* ShiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftCell.swift; sourceTree = "<group>"; };
+		6981FFC625E7213F0037B18A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		69AA32F925E7599F00BE9F22 /* ShiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftViewController.swift; sourceTree = "<group>"; };
+		69DDBD9825E7628A00DCADD5 /* ShiftPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftPost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,16 +118,17 @@
 			isa = PBXGroup;
 			children = (
 				6981FFA725E627720037B18A /* Util */,
-				6981FFA125E626DD0037B18A /* URL+extension */,
+				6981FFA125E626DD0037B18A /* Extension */,
 				6981FF9825E626780037B18A /* Service */,
 				6981FF5D25E617CA0037B18A /* AppDelegate.swift */,
 				6981FF5F25E617CA0037B18A /* SceneDelegate.swift */,
-				6981FF6125E617CA0037B18A /* ShiftListViewController.swift */,
+				69DDBDA525E77D7700DCADD5 /* Views */,
 				6981FF6325E617CA0037B18A /* Main.storyboard */,
 				6981FF6625E617CB0037B18A /* Assets.xcassets */,
 				6981FF6825E617CB0037B18A /* LaunchScreen.storyboard */,
 				6981FF6B25E617CB0037B18A /* Info.plist */,
 				6981FF9025E61A290037B18A /* Shift.swift */,
+				69DDBD9825E7628A00DCADD5 /* ShiftPost.swift */,
 				6981FFB825E630B80037B18A /* ShiftCell.swift */,
 				6981FFB325E630050037B18A /* ShiftCell.xib */,
 			);
@@ -154,12 +161,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		6981FFA125E626DD0037B18A /* URL+extension */ = {
+		6981FFA125E626DD0037B18A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				6981FFA225E627380037B18A /* URL+Extension.swift */,
+				6981FFC625E7213F0037B18A /* UIImageView+Extension.swift */,
 			);
-			path = "URL+extension";
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		6981FFA725E627720037B18A /* Util */ = {
@@ -168,6 +176,15 @@
 				6981FFA825E6278E0037B18A /* Constants.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		69DDBDA525E77D7700DCADD5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6981FF6125E617CA0037B18A /* ShiftListViewController.swift */,
+				69AA32F925E7599F00BE9F22 /* ShiftViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,11 +321,14 @@
 				6981FFB925E630B80037B18A /* ShiftCell.swift in Sources */,
 				6981FF9125E61A290037B18A /* Shift.swift in Sources */,
 				6981FF9A25E6268A0037B18A /* HTTPClient.swift in Sources */,
+				6981FFC725E7213F0037B18A /* UIImageView+Extension.swift in Sources */,
 				6981FF6225E617CA0037B18A /* ShiftListViewController.swift in Sources */,
 				6981FF5E25E617CA0037B18A /* AppDelegate.swift in Sources */,
+				69DDBD9925E7628A00DCADD5 /* ShiftPost.swift in Sources */,
 				6981FFA925E6278E0037B18A /* Constants.swift in Sources */,
 				6981FF6025E617CA0037B18A /* SceneDelegate.swift in Sources */,
 				6981FFA325E627380037B18A /* URL+Extension.swift in Sources */,
+				69AA32FA25E7599F00BE9F22 /* ShiftViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
