@@ -10,8 +10,7 @@ import UIKit
 
 class ShiftCell: UITableViewCell {
 
-    // Link those IBOutlets with the UILabels in your .XIB file
-    @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var endLabel: UILabel!
 

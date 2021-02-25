@@ -13,6 +13,7 @@ class ShiftListViewController: UIViewController {
     
     private var shiftList: ShiftList?
     private var httpClient = HTTPClient()
+    private var activityView = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,17 +38,24 @@ class ShiftListViewController: UIViewController {
     
     func getShiftList(){
         
+        
+        activityView.center = self.view.center
+        self.view.addSubview(activityView)
+        activityView.startAnimating()
+        
         httpClient.getShifts { result in
             switch result {
             case .success(let details):
                 DispatchQueue.main.async {
                     self.shiftList = details
                     self.shiftTableView.reloadData()
+                    self.activityView.stopAnimating()
                 //    self.loadingState = .success
                 }
             case .failure(let error):
                 print(error.localizedDescription)
                 DispatchQueue.main.async {
+                    self.activityView.stopAnimating()
                  //   self.loadingState = .failed
                 }
             }
@@ -70,7 +78,7 @@ extension ShiftListViewController : UITableViewDelegate,  UITableViewDataSource{
  
         if let shift = shiftList?[indexPath.row] {
             if let imageURL = shift.image {
-                cell.img.setImageFromUrl(ImageURL: imageURL)
+                cell.imgView.setImageFromUrl(ImageURL: imageURL)
             }
             let formatter = DateFormatter()
             formatter.dateFormat = "d MMM y hh:mm a"

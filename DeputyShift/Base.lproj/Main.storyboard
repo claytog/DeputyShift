@@ -58,8 +58,8 @@
                                 <rect key="frame" x="0.0" y="299" width="414" height="216"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Start Time or End Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXS-87-7Qi">
-                                <rect key="frame" x="30" y="174" width="227" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="91" y="174" width="232.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -73,14 +73,6 @@
                                     <action selector="didPressStartEnd:" destination="UxI-1o-QCg" eventType="valueChanged" id="XXs-ga-6oj"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vd4-pz-2tN">
-                                <rect key="frame" x="332" y="20" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="didPressButton:" destination="UxI-1o-QCg" eventType="touchUpInside" id="bil-Po-qXc"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="messageLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgF-8x-fsd">
                                 <rect key="frame" x="30" y="118" width="364" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -97,6 +89,7 @@
                             <constraint firstItem="sXS-87-7Qi" firstAttribute="top" secondItem="moy-xV-7yV" secondAttribute="top" constant="86" id="6dj-7V-MPU"/>
                             <constraint firstItem="CgR-YT-9DT" firstAttribute="top" secondItem="sXS-87-7Qi" secondAttribute="bottom" constant="44" id="BLX-qZ-V93"/>
                             <constraint firstItem="NzN-Y0-Kw6" firstAttribute="leading" secondItem="moy-xV-7yV" secondAttribute="leading" id="FSy-yf-nE0"/>
+                            <constraint firstItem="sXS-87-7Qi" firstAttribute="centerX" secondItem="jmH-vo-qpS" secondAttribute="centerX" id="FU1-k0-8ex"/>
                             <constraint firstItem="CgR-YT-9DT" firstAttribute="centerX" secondItem="jmH-vo-qpS" secondAttribute="centerX" id="GdP-HD-cYv"/>
                             <constraint firstItem="jO1-wu-ZAX" firstAttribute="centerX" secondItem="jmH-vo-qpS" secondAttribute="centerX" id="Hye-pO-isS"/>
                             <constraint firstItem="NzN-Y0-Kw6" firstAttribute="top" secondItem="CgR-YT-9DT" secondAttribute="bottom" constant="29" id="epu-MX-Uga"/>
@@ -104,7 +97,6 @@
                             <constraint firstItem="NgF-8x-fsd" firstAttribute="top" secondItem="moy-xV-7yV" secondAttribute="top" constant="30" id="imB-yn-Xoh"/>
                             <constraint firstItem="moy-xV-7yV" firstAttribute="trailing" secondItem="NgF-8x-fsd" secondAttribute="trailing" constant="20" id="keF-dh-sox"/>
                             <constraint firstItem="jO1-wu-ZAX" firstAttribute="top" secondItem="NgF-8x-fsd" secondAttribute="bottom" constant="8" symbolic="YES" id="lJb-Pr-NZs"/>
-                            <constraint firstItem="sXS-87-7Qi" firstAttribute="leading" secondItem="moy-xV-7yV" secondAttribute="leading" constant="30" id="ySh-t6-oDW"/>
                             <constraint firstItem="NgF-8x-fsd" firstAttribute="leading" secondItem="moy-xV-7yV" secondAttribute="leading" constant="30" id="zmL-4J-yLC"/>
                         </constraints>
                     </view>
