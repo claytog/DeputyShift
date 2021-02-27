@@ -26,7 +26,6 @@ class HTTPClient {
             return completion(.failure(.badURL))
         }
         
-
         print (url)
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -60,11 +59,8 @@ class HTTPClient {
         
         let jsonEncoder = JSONEncoder()
         let jsonData = try? jsonEncoder.encode(shift)
-        let json = String(data: jsonData!, encoding: String.Encoding.utf8)
-
-        print(json)
-        
-     //   let jsonData = try? JSONSerialization.data(withJSONObject: json)
+//        let json = String(data: jsonData!, encoding: String.Encoding.utf8)
+//        print(json)
         
         print (url)
         var request = URLRequest(url: url)
@@ -83,15 +79,9 @@ class HTTPClient {
             }
             
             let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-                if let responseJSON = responseJSON as? [String: Any] {
-                    print(responseJSON)
-                }
-            
-            //            let decoder =  JSONDecoder()
-//            decoder.dateDecodingStrategy = .iso8601
-//            guard let shiftsDetail = try? decoder.decode(ShiftList.self, from: data) else {
-//                return completion(.failure(.decodingError))
-//            }
+            if let responseJSON = responseJSON as? [String: Any] {
+                print(responseJSON)
+            }
             
             completion(.success(str))
             

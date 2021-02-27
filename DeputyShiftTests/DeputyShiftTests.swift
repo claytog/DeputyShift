@@ -29,5 +29,42 @@ class DeputyShiftTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testCreateShiftPost() {
+        /// Test create an instance of ShiftPost
+        
+        let testPostShift = ShiftPost()
+        
+        XCTAssertTrue(testPostShift.latitude == "0.00000" && testPostShift.longitude == "0.00000")
+    }
+    
+    func testDateToString() {
+        /// Test the formatDateToString function successfully converts the date to a string
+        
+        let isoDate = "2021-04-14T10:44:00+1000"
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let date = dateFormatter.date(from:isoDate)!
+        
+        let dateString = Util.shared.formatDateToString(date: date, dateType: .long)
+        
+        XCTAssertTrue(dateString == isoDate)
+        
+    }
+    
+    func testStringToDate() {
+        /// Test the formatStringToDate function successfully converts the string to a date
+        
+        let isoDate = "2021-04-14T10:44:00+1000"
+        
+        var dateString = ""
+        
+        if let date = Util.shared.formatStringToDate(dateStr: isoDate, dateType: .long) {
+            dateString = Util.shared.formatDateToString(date: date, dateType: .long)
+        }
+        XCTAssertTrue(isoDate == dateString)
+        
+    }
 
 }

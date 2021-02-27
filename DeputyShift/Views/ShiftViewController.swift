@@ -26,12 +26,9 @@ class ShiftViewController: UIViewController {
     @IBAction func didPressSave(_ sender: Any) {
         actInd.isHidden = false
         actInd.startAnimating()
+        
         let postShift: ShiftPost = ShiftPost()
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZ"
-        
-        postShift.time = formatter.string(from: shiftTime.date)
+        postShift.time = Util.shared.formatDateToString(date: shiftTime.date, dateType: .long)
         postShift.latitude = latLabel.text
         postShift.longitude = longLabel.text
        
@@ -84,7 +81,6 @@ extension ShiftViewController : CLLocationManagerDelegate {
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
-            //locationManager.startUpdatingHeading()
         }
     }
     

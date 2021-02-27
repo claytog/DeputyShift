@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6941AE5425E89E00001CD694 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6941AE5325E89E00001CD694 /* Util.swift */; };
 		6981FF5E25E617CA0037B18A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6981FF5D25E617CA0037B18A /* AppDelegate.swift */; };
 		6981FF6025E617CA0037B18A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6981FF5F25E617CA0037B18A /* SceneDelegate.swift */; };
 		6981FF6225E617CA0037B18A /* ShiftListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6981FF6125E617CA0037B18A /* ShiftListViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6941AE5325E89E00001CD694 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		6981FF5A25E617CA0037B18A /* DeputyShift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeputyShift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6981FF5D25E617CA0037B18A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6981FF5F25E617CA0037B18A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				6981FFA825E6278E0037B18A /* Constants.swift */,
+				6941AE5325E89E00001CD694 /* Util.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				6981FF6225E617CA0037B18A /* ShiftListViewController.swift in Sources */,
 				6981FF5E25E617CA0037B18A /* AppDelegate.swift in Sources */,
 				69DDBD9925E7628A00DCADD5 /* ShiftPost.swift in Sources */,
+				6941AE5425E89E00001CD694 /* Util.swift in Sources */,
 				6981FFA925E6278E0037B18A /* Constants.swift in Sources */,
 				6981FF6025E617CA0037B18A /* SceneDelegate.swift in Sources */,
 				6981FFA325E627380037B18A /* URL+Extension.swift in Sources */,

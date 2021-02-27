@@ -25,8 +25,6 @@ class ShiftListViewController: UIViewController {
         shiftTableView.register(UINib(nibName: "ShiftCell", bundle: nil), forCellReuseIdentifier: "ShiftCell")
         
         shiftTableView.tableFooterView = UIView()
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool){
@@ -80,20 +78,15 @@ extension ShiftListViewController : UITableViewDelegate,  UITableViewDataSource{
             if let imageURL = shift.image {
                 cell.imgView.setImageFromUrl(ImageURL: imageURL)
             }
-            let formatter = DateFormatter()
-            formatter.dateFormat = "d MMM y hh:mm a"
-            
-            let toFormatter = DateFormatter()
-            toFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZ"
             
             if let start = shift.start {
-                if let date = toFormatter.date(from: start) {
-                    cell.startLabel.text = formatter.string(from: date)
+                if let date = Util.shared.formatStringToDate(dateStr: start, dateType: .long) {
+                    cell.startLabel.text = Util.shared.formatDateToString(date: date, dateType: .medium)
                 }
             }
             if let end = shift.end {
-                if let date = toFormatter.date(from: end) {
-                    cell.endLabel.text = formatter.string(from: date)
+                if let date = Util.shared.formatStringToDate(dateStr: end, dateType: .long) {
+                    cell.endLabel.text = Util.shared.formatDateToString(date: date, dateType: .medium)
                 }else{
                     cell.endLabel.text = ""
                 }
