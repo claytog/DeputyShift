@@ -66,5 +66,20 @@ class DeputyShiftTests: XCTestCase {
         XCTAssertTrue(isoDate == dateString)
         
     }
+    
+    func testPayloadGet(){
+        
+        let json = """
+        [{"id":13,"start":"2021-02-26T16:03:12+1100","end":"","startLatitude":"0.00000","startLongitude":"0.00000","endLatitude":"0.00000","endLongitude":"0.00000","image":"https://unsplash.it/500/500?random"},{"id":14,"start":"2021-02-27T13:00:41+1100","end":"","startLatitude":"0.00000","startLongitude":"0.00000","endLatitude":"0.00000","endLongitude":"0.00000","image":"https://unsplash.it/500/500?random"}]
+        """
+
+        let jsonData = json.data(using: .utf8)!
+
+        let shiftsDetail = try? JSONDecoder().decode(ShiftList.self, from: jsonData)
+
+        let shift = shiftsDetail![0]
+        
+        XCTAssertTrue(shift.id == 13)
+    }
 
 }

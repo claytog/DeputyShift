@@ -40,9 +40,7 @@ class HTTPClient {
                 return completion(.failure(.noData))
             }
      
-            let decoder =  JSONDecoder()
-            decoder.dateDecodingStrategy = .iso8601
-            guard let shiftsDetail = try? decoder.decode(ShiftList.self, from: data) else {
+            guard let shiftsDetail = try? JSONDecoder().decode(ShiftList.self, from: data) else {
                 return completion(.failure(.decodingError))
             }
             

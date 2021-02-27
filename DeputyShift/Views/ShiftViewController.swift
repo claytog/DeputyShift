@@ -85,10 +85,10 @@ extension ShiftViewController : CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            if let location = locations.first {
-                self.latLabel.text = String(format: "%.5f", location.coordinate.latitude)
-                self.longLabel.text = String(format: "%.5f", location.coordinate.longitude)
-            }
+        if let location = locations.first {
+            self.latLabel.text = String(format: "%.5f", location.coordinate.latitude)
+            self.longLabel.text = String(format: "%.5f", location.coordinate.longitude)
         }
+    }
     
 }

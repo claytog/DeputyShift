@@ -17,7 +17,6 @@ class ShiftListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
 
         shiftTableView.delegate = self
         shiftTableView.dataSource = self
@@ -31,7 +30,6 @@ class ShiftListViewController: UIViewController {
         super.viewDidAppear(animated)
         
         getShiftList()
-        
     }
     
     func getShiftList(){
@@ -48,13 +46,11 @@ class ShiftListViewController: UIViewController {
                     self.shiftList = details
                     self.shiftTableView.reloadData()
                     self.activityView.stopAnimating()
-                //    self.loadingState = .success
                 }
             case .failure(let error):
                 print(error.localizedDescription)
                 DispatchQueue.main.async {
                     self.activityView.stopAnimating()
-                 //   self.loadingState = .failed
                 }
             }
         }
@@ -76,7 +72,9 @@ extension ShiftListViewController : UITableViewDelegate,  UITableViewDataSource{
  
         if let shift = shiftList?[indexPath.row] {
             if let imageURL = shift.image {
-                cell.imgView.setImageFromUrl(ImageURL: imageURL)
+                if cell.imgView.image == nil {
+                    cell.imgView.setImageFromUrl(ImageURL: imageURL)
+                }
             }
             
             if let start = shift.start {
